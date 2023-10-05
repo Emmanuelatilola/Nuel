@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #farm{
+        background-color: red;
+        border: 1px solid white;
+        height: 100px;
+        width: 100px;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <h1 id="top"></h1>
+    <p id="pop"></p>
+    <p id="bop"></p>
+    <p id="tim"></p>
+    <h1 id="kid"></h1>
+    <button onclick="displayNum(1)">1</button>
+    <button onclick="displayNum(2)">2</button>
+    <button onclick="displayNum(3)">3</button>
+    <button onclick="displayNum(4)">4</button>
+    <button onclick="displayNum(5)">5</button>
+    <button onclick="displayNum(6)">6</button>
+    <button onclick="displayNum(7)">7</button>
+    <button onclick="displayNum(8)">8</button>
+    <button onclick="displayNum(9)">9</button>
+    <button onclick="displayNum(0)">0</button>
+
+    
+</body>
+<script>
+    // var name = "Emma";
+    // alert(name)
+    // console.log(name);
+
+    let name = "emmanuel";
+    let greeting = "welcome to class," + name; 
+    let h1 = document.getElementById("top");
+    h1.innerText = greeting;
+
+
+    let age = "100";
+    let thesecondage = Number(age);
+    console.log(typeof age);
+    console.log(typeof thesecondage);
+
+
+    const nameArr = ["lawrence", "olaide", "gbolahan"];
+    console.log(nameArr[0]);
+
+    const obj1= {
+        
+        name: "Emmanuel",
+        age: 22,
+        color: ["red", "green", "blue"],
+        height: 6.1,
+       
+    }
+    console.log(obj1.color);
+
+    let keyword = "javascript,";
+    let greetings = "welcome to " + keyword + name;
+    let pop = document.getElementById("pop");
+    h1.innerText = greetings;
+    console.log(typeof keyword);
+
+
+//Assignment operators
+
+let test1 = 50;
+let test2 = 50;
+
+test1 += test2;
+console.log(test1);
+
+test1 -= 30;
+console.log(test1);
+
+//Arithmetic operators
+
+let test3 = 60;
+let test4 = 4;
+console.log(test3 + test4);
+console.log(test3 - test4);
+console.log(test3 / test4);
+console.log(test3 * test4);
+console.log(test3 % test4);
+console.log(test3 ** test4);
+test3 ++ ;
+console.log(test3);
+
+//Comparison operators
+
+console.log (test3 == test4);
+console.log (45 == "45");
+console.log (45 === "45");
+console.log (45 != "45");
+console.log (45 !=="45");
+console.log (45 > 45);
+console.log (45 >= 45);
+console.log (45 < 45);
+console.log (45 <= 45);
+
+//Logical operators
+
+console.log (45 ==="45" && 45 == "45");
+console.log (45 ==="45" || 45 == "45");
+console.log (! (45 === "45"));
+
+//Ternary operators
+
+let test5 = 30;
+let test6 = 25;
+
+test5 === test6 ? console.log ("they are equal") : console.log("they are not equal");
+
+
+//DOM Manipulation
+
+let bop = document.querySelector("#bop");
+pop.innerText = "hello";
+
+let tim = document.getElementById("tim");
+tim.innerText = "Whats up"
+
+let parentElement = document.body;
+let newDiv = document.createElement("div");
+newDiv.id = "farm";
+newDiv.innerText = "Oops";
+parentElement.appendChild(newDiv);
+
+
+
+
+let tom = 33;
+if (tom % 2== 0) {
+    console.log("it is divisible by 2")
+}
+else if (tom % 3 == 0) {
+    console.log("it is divisible by 5");
+}
+else{
+    console.log("it is neither divisible by 2 or 3");
+}
+
+
+
+let day = prompt("Enter your day of the week");
+switch (Number(day)) {
+    case 1:
+        alert("Sunday");
+        break;
+    case 2:
+        alert("Monday");
+        break;
+    case 3:
+        alert("Tuesday");
+        break;
+    case 4:
+        alert("Wednesday");
+        break;
+    case 5:
+        alert("Thursday");
+        break;
+    case 6:
+        alert("Friday");
+        break;
+    case 7:
+        alert("Saturday");
+        break;
+
+    default:
+        alert("Invalid day");
+        break;
+}
+
+let kid = document.getElementById("kid");
+function displayNum(num){
+    kid.innerHTML += num;
+}
+
+//differences between the function statement and arrow functions in JS.
+
+
+function addNum() {
+    let sum = 2 + 3;
+    let division = 10 / 2;
+    let modulo = 100 % 5;
+    return [sum, division, modulo];
+}
+
+let example1 = addNum();
+console.log(example1);
+parent = document.body;
+let j1 = document.createElement("jerry")
+h1.innerHTML = addNum();
+parent.appendChild(j1);
+
+
+let num2 = 55;
+function kickNum() {
+    if (num2 % 2 === 0) {
+        return `${num2} is even`
+    } else{
+        return `${num2} is odd`
+    }
+}
+
+
+let exam = "Lawrence";
+let exam2 = exam.slice(0 , 3);
+console.log(exam2);
+
+let exam3 = "Adeyemi";
+console.log(exam3.substring(3, 7));
+
+let exam4 = "Emmanuel";
+console.log(exam4.substr(0, 4));
+console.log(exam4.substr(4, 4));
+
+let exam5 = "I support Arsenal";
+console.log(exam5.replace("Arsenal", "Chelsea"));
+
+console.log(exam5.toUpperCase());
+console.log(exam5.toLowerCase());
+
+let ox = "Chelsea Barca Madrid Liverpool";
+console.log(ox.split(" "));
+
+let exam6 = " Timmy ";
+console.log(exam6);
+console.log(exam6.trim());
+
+let exam7 = "Adewole";
+console.log(exam7.charAt(4));
+
+let exam8 = "Akin";
+let exam9 = "Zima";
+let exam10 = "Enoch";
+console.log(exam8.concat(" ", exam9, " ", exam10));
+
+
+let track= [1,2,3,4,5,6,7,8,9,0];
+console.log(track.length);
+console.log(track.toString());
+console.log(track.join("|"));
+
+const track2 = ["salzburg", "chelsea", "man city", "liverpool", ];
+track2.pop();
+console.log(track2);
+
+track2.push("Bayern");
+console.log(track2);
+
+track2.shift();
+console.log(track2);
+
+track2.unshift("Man Utd");
+console.log(track2);
+
+track2[2] = "Arsenal";
+console.log(track2);
+
+track3 = [1,2,3,4,5];
+track4 = [6,7,8,9,0];
+
+console.log(track3.concat(track4));
+
+const track6 = ["bananas", "apple", "oranges", "kiwi", "lemon", "watermelon"];
+track6.splice(3, 1, "mango", "pineapple");
+console.log(track6);
+
+track6.splice(5, 1);
+console.log(track6);
+
+const track7 = ["green", "black", "white", "grey", "purple", "yellow", "violet"];
+console.log(track7);
+const track8 = track7.slice(1, 4);
+console.log(track8);
+
+const track9 = [track7[1], track7[5], track7[6]];
+console.log(track9);
+
+const track10 = [2,4,6,8,0];
+const track11 = [1,3,5,7,9];
+const track12 = [...track11, ...track10];
+console.log (track12);
+
+const track13 = ["red", "blue", "green", "black"];
+let [color1, color2, color3, color4] = track13;
+console.log(color2);
+
+const person1 = {Surname: "lawrence", DOB:111111, color:"black", food: "rice"};
+const {Surname, DOB, color, food} = person1;
+console.log(person1);
+
+const arrNum = [1,2,3,4,5,6,7,8,9];
+for(let i = 0; i < arrNum.length; i++){
+    let num = arrNum[i];
+    console.log(num * 2);
+}
+
+const details = {
+    name: "Test",
+    age: 111,
+    color: "grey",
+    food: "beans",
+    drink: "fanta",
+}
+
+for (key in details){
+    let values = details[key];
+    console.log(values);
+}
+
+let i = 0;
+while (i < 10){
+    console.log(i);
+    i++;
+} 
+
+
+let j = 0;
+do{
+    console.log(j);
+    j++;
+}while(j < 7);
+
+
+
+
+
+
+</script>
+</html>

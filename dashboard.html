@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: burlywood;
+    }
+    /* #main{
+        width: 100%;
+        height: 50vh;
+        background-color: gray;
+    }
+    #minor{
+        width: 100%;
+        height: 40vh;
+        background-color: beige;
+    }
+    #minorH1{
+        width: 100%;
+        height: 200px;
+        background-color: gainsboro;
+        color: black;
+    } */
+</style>
+<body>
+    <div id="main">
+        <h1>Welcome to your Dashboard <span id="abc"></span></h1>
+        <input type="text" id="contentOne" placeholder="Title"> <br> <br>
+        <textarea name="" id="contentTwo" cols="30" rows="10" placeholder="Content"></textarea> <br> <br>
+        <button id="btn" onclick="post()">Add Post</button>
+        <button id="btn2" onclick="">Log Out</button>
+
+    </div>
+    <div id="minor">
+        <h3 id="firstH1"></h3>
+        <h1 id="secondH1"></h1>
+    </div>
+</body>
+</html>
+
+<script>
+    let firstCon = document.getElementById("contentOne");
+    let secondCon = document.getElementById("contentTwo");
+
+    function post(){
+        console.log(secondCon.value)
+        firstH1.innerText = firstCon.value ;
+        secondH1.innerText = secondCon.value ;
+    }
+
+    function logOut(){
+        window.location.href = "login.html"
+    }
+</script>

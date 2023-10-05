@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+</body>
+<script>
+    let p1 = document.getElementById("p1");
+
+    let arrOne = [1,2,3,4,5,6,7,8,9];
+    arrOne.forEach(  (item , index) => {
+        console.log(item * 7);
+        p1.innerHTML += `${item * 7} <br> `
+    }
+
+    )
+    const multiply2 = (item, index, array) => {
+        console.log(item * 9);
+    }
+
+    arrOne.forEach(multiply2);
+
+
+    let test1 = arrOne.map ((item, index) => {
+        return item * 11
+    })
+    console.log(test1);
+
+    let test2 = arrOne.filter((item , index) => {
+        return item % 2 === 0;
+    }
+    )
+    console.log(test2);
+
+    let test3 = arrOne.find((item, index) => {
+        return item % 2 === 0;
+    })
+    console.log (test3);
+
+    let test4 = arrOne.reduce((total, item, index)=> {
+        return total + item;
+    }, 0)
+    console.log (test4);
+
+    let arrTwo = [
+        {name: "test1", age: 11},
+        {name: "test2", age: 12},
+        {name: "test3", age: 13},
+        {name: "test4", age: 14},
+        {name: "test5", age: 15},
+        {name: "test6", age: 16},
+        {name: "test7", age: 17},
+        {name: "test8", age: 18},
+        {name: "test9", age: 19},
+    ]
+
+    let test5 = arrTwo.reduce((total, item, index) => {
+        return item.age + total;
+    }, 0)
+    console.log (test5);
+
+    let name = "spongebob squarepants";
+    localStorage.setItem("name", name);
+
+    let strArrTwo = JSON.stringify(arrTwo);
+    localStorage.setItem("arr2", strArrTwo);
+
+    let test = localStorage.getItem("arr2");
+    console.log(JSON.parse(test));
+
+    // localStorage.removeItem("name");
+
+    // localStorage.clear();
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h2>
+        Guesssing Game
+    </h2>
+    <p>
+        Guess a number from 0 - 9
+    </p>
+    <input type="number"  id="input1">
+    <button id="btn" onclick="check()">Check Number</button>
+</body>
+<script>
+
+    let input1 = document.getElementById("input1");
+    let numOne = Math.floor(Math.random() * 10);
+    console.log(numOne)
+   
+    function check(){
+        
+      if (input1.value == numOne){
+        alert("Correct")
+    } else 
+       alert("Incorrect Number...Better luck next time")
+    } 
+</script>
+</html>

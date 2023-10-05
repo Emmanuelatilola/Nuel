@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="koko"></h1>
+    <button onclick="analysis()">Click Here</button>
+</body>
+<script>
+function analysis() {
+   let koko = document.getElementById("koko");
+    let userInfo = prompt("Enter your sentence:");
+
+    if (userInfo !== null) {
+      
+        let length = userInfo.length;
+        let countA = (userInfo.match(/a/gi) || []).length;
+        let upperCase = userInfo.toUpperCase();
+        let lowerCase = userInfo.toLowerCase();
+
+        let result = ("Length of the input: " + length +
+              "\nNumber of 'A' : " + countA +
+              "\nUpper case: " + upperCase +
+              "\nLower case: " + lowerCase);
+
+              koko.innerText = result;
+    }
+}
+</script>
+
+
+</html>

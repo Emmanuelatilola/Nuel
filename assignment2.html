@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(212, 159, 139);
+    }
+    #container{
+        background-color: gray;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        height: 350px;
+        width: 450px;
+        border-radius: 10px;
+        outline: none;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #home{
+        height: 50px;
+        width: 100%;
+        background-color: red;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #home button{
+        height: 30px;
+        width: 30%;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid transparent;
+    }
+    #num{
+        outline: none;
+        height: 30px;
+        width: 60%;
+        border-radius: 5px;
+        border: 1px solid transparent;
+    }
+</style>
+<body>
+    <div id="container">
+        <h2>Check your grades here! </h2>
+
+        <div id="home">
+            <input type="number" name="Checker" id="num" placeholder="Enter Your Score">
+            <button onclick="grade()">Check</button>
+        </div>
+
+        <div id="home2">
+            <h1 id="boom"></h1>
+        </div>
+    </div>
+    
+</body>
+<script>
+
+    
+    function grade() {
+
+        const num = parseFloat(document.getElementById("num").value);
+        console.log(num);
+
+        if (Number (num) < 0) {
+            console.log ("Invalid");
+            document.getElementById("boom").innerHTML = "Invalid";
+        } else if (num <= 35) {
+            console.log ("D grade");
+            document.getElementById("boom").innerHTML = "F grade";
+        } else if (num <= 45) {
+            console.log ("D grade");
+            document.getElementById("boom").innerHTML = "D grade";
+        } else if ( num <= 55) {
+            console.log( "C grade");
+            document.getElementById("boom").innerHTML = "C grade";
+        } else if ( num <= 65) {
+            console.log("B grade");
+            document.getElementById("boom").innerHTML = "B grade";
+        } else if (num <= 75) {
+            console.log("A grade");
+            document.getElementById("boom").innerHTML = "A grade";
+        } else if (num > 100) {
+            console.log("Not recognised")
+            document.getElementById("boom").innerHTML = "Not recognised";
+        }
+       
+    }
+
+
+</script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    
+</style>
+<body>
+
+        <input type="text" id="test1" value=" ">
+        <input type="text" id="test2">
+        <button id="btn" onclick="change()">Click here</button>
+   
+    
+</body>
+<script>
+     function change() {
+            let test1 = document.getElementById("test1");
+            let test2 = document.getElementById("test2");
+
+            test2.value = test1.value.replace("football", "basketball");
+            test1.style.value = "none";
+        }
+    
+</script>
+</html>

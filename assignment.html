@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+
+    body{
+        background-color: coral;
+    }
+    .container{
+        width: 450px;
+        height: 460px;
+        background-color: black;
+        border: 5px solid rgb(245, 245, 186);
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #home{
+        width: 450px;
+        height: 360px;
+        border-radius: 2px;
+        background-color: black;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+    #home2 button{
+        height: 80px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: beige;
+        border: 1px solid transparent;
+    }
+    .ox{
+        height: 50px;
+        width: 80%;
+        border-radius: 10px;
+        background-color: beige;
+        border: 1px solid transparent;
+    }
+    #home2{
+        width: 65%;
+        height: 350px;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #home3{
+        background-color: black;
+        width: 35%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #top{
+        width: 98%;
+        height: 80px;
+        background-color: lavender;
+    }
+</style>
+<body>
+
+
+    <div class="container">
+        <div id="top">
+            <h1 id="tom1"></h1>
+        </div>
+        <div id="home">
+
+            <div id="home2">
+                <button onclick="Digit(1)">1</button>
+                <button onclick="Digit(2)">2</button>
+                <button onclick="Digit(3)">3</button>
+                <button onclick="Digit(4)">4</button>
+                <button onclick="Digit(5)">5</button>
+                <button onclick="Digit(6)">6</button>
+                <button onclick="Digit(7)">7</button>
+                <button onclick="Digit(8)">8</button>
+                <button onclick="Digit(9)">9</button>
+                <button onclick="Digit(0)">0</button>
+                <button onclick="clearResult()">CE</button>
+            </div>
+            <div id="home3">
+                <button class="ox" onclick="Operator('+')">+</button>
+                <button class="ox" onclick="Operator('-')">-</button>
+                <button class="ox" onclick="Operator('*')">*</button>
+                <button class="ox" onclick="Operator('/')">/</button>
+                <button class="ox" onclick="calculate(symbol)">=</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>   
+
+
+
+let tom1 = document.getElementById("tom1");
+
+let value1 = "";
+let value2 = "";
+let symbol = "";
+
+function Digit(num) {
+    tom1.innerHTML += num;
+    value1 += num;
+}
+
+function Operator(num2) {
+    tom1.innerHTML += num2;
+    value2 = value1;
+    value1 = "";
+    symbol = num2;
+}
+
+function clearResult() {
+    tom1.innerHTML = "";
+    value1 = "";
+    value2 = "";
+}
+
+function calculate(symbol) {
+    if (symbol === '+') {
+        result = Number(value2) + Number(value1);
+        tom1.innerHTML = result;
+        value1 = result;
+    }
+    else if (symbol === '/') {
+        result = Number(value2) / Number(value1);
+        tom1.innerHTML = result;
+        value1 = result;
+    }
+    else if (symbol === '*') {
+        result = Number(value2) * Number(value1);
+        tom1.innerHTML = result;
+        value1 = result;
+    }
+    else if (symbol === '-') {
+        result = Number(value2) - Number(value1);
+        tom1.innerHTML = result;
+        value1 = result;
+    }
+
+}
+
+</script>
+</html>
